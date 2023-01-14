@@ -1,0 +1,37 @@
+main {
+    display: flex;
+    align-items: center; 
+
+    img {
+        height: 100vh;
+        width: 55vw;
+        object-fit: cover;
+    }
+
+    article {
+        margin: 0 5vw;
+
+        h2{
+            margin-bottom: 10vh;
+            font-variation-settings: "wght" 300;
+            letter-spacing: 0.2rem;
+            font-size: 2rem;
+        }
+    }
+}
+
+
+li:nth-of-type(3) a:nth-of-type(1) {
+    color: white;
+}
+
+li:nth-of-type(3)::before {
+    background-image: url('../img/navBig.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 20px; 
+    height: 20px;
+    content:"";
+    margin: 0;
+}

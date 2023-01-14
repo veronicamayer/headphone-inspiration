@@ -1,0 +1,142 @@
+@font-face {
+    font-family: Work Sans;
+    src: url(../fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Work Sans;
+}
+
+html {
+    background-color: #2e2e2e;
+}
+
+h1,h2, h3, h4 {
+    color: #ebccc2;
+}
+
+h2 {
+    font-variation-settings: "wght" 300;
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+}
+
+h3 {
+    font-variation-settings: "wght" 300;
+    letter-spacing: 0.2rem;
+    font-size: 1.5rem;
+    margin-bottom: 1vh;
+}
+
+h4 {
+    margin-bottom: 1vh;
+    font-variation-settings: "wght" 300;
+    letter-spacing: 0.2rem;
+}
+
+p, a {
+    color: #717171;
+    line-height: 1.5rem;
+    margin-bottom: 2vh;
+}
+
+header {
+    margin: 3vh 4vw;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 50%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 90vw;
+
+
+    nav {
+        text-align: right;
+
+        a {
+            font-size: 0.8rem;
+            text-decoration: none;
+            margin: 0 3vw;
+            color: #867772;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #ebccc2;
+            transition: color 1s ease-in-out;
+        }
+
+        .socials {
+            margin: 0.5vw;
+        }
+    }
+}
+
+aside {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background-color: transparent;
+
+    nav {
+        text-align: right;
+
+        a {
+            font-size: 0.8rem;
+            color: #ebccc2;
+            text-decoration: none;
+            margin: 0 3vw;
+            color: #867772;
+        }
+
+        a:hover {
+            color: white;
+            transition: color 1s ease-in-out;
+        }
+    }
+
+    ul {
+        text-align: left;
+        margin-left: 3vw;
+        list-style: none;
+
+        li {
+            line-height: 20px;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+        }
+        
+        li::before {
+            background-image: url('../img/navSmall.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: inline-block;
+            width: 18px; 
+            height: 18px;
+            content:"";
+            margin-left: 2.5px;
+        }
+
+        div {
+            border-left: 1px solid #424242;
+            height: 60px;
+            margin-left: 10px;
+            margin-bottom: 5px;
+        }        
+    }
+}
+
+
+
+
+
+
+
