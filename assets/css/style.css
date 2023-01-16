@@ -21,6 +21,7 @@ h2 {
   font-variation-settings: "wght" 300;
   letter-spacing: 0.2rem;
   font-size: 2rem;
+  margin-bottom: 0;
 }
 
 h3 {
@@ -31,9 +32,10 @@ h3 {
 }
 
 h4 {
-  margin-bottom: 1vh;
   font-variation-settings: "wght" 300;
   letter-spacing: 0.2rem;
+  font-size: 1rem;
+  margin-bottom: 1vh;
 }
 
 p, a {
@@ -43,15 +45,15 @@ p, a {
 }
 
 header {
-  margin: 3vh 4vw;
   display: grid;
-  align-items: center;
   grid-template-columns: repeat(2, 50%);
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
+  align-items: center;
   width: 90vw;
+  margin: 3vh 4vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 header nav {
   text-align: right;
@@ -63,9 +65,9 @@ header nav a {
   color: #867772;
 }
 header nav a:hover {
-  text-decoration: underline;
   color: #ebccc2;
   transition: color 1s ease-in-out;
+  text-decoration: underline;
 }
 header nav .socials {
   margin: 0.5vw;
@@ -73,10 +75,10 @@ header nav .socials {
 
 aside {
   position: fixed;
-  left: 0;
   top: 50%;
-  transform: translateY(-50%);
+  left: 0;
   z-index: 2;
+  transform: translateY(-50%);
   background-color: transparent;
 }
 aside nav {
@@ -84,7 +86,6 @@ aside nav {
 }
 aside nav a {
   font-size: 0.8rem;
-  color: #ebccc2;
   text-decoration: none;
   margin: 0 3vw;
   color: #867772;
@@ -92,6 +93,7 @@ aside nav a {
 aside nav a:hover {
   color: white;
   transition: color 1s ease-in-out;
+  text-decoration: none;
 }
 aside ul {
   text-align: left;
@@ -117,8 +119,7 @@ aside ul li::before {
 aside ul div {
   border-left: 1px solid #424242;
   height: 60px;
-  margin-left: 10px;
-  margin-bottom: 5px;
+  margin: 0 0 5px 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,3 +1,6 @@
+@use "mixins.scss";
+@use "variables.scss";
+
 @font-face {
     font-family: Work Sans;
     src: url(../fonts/WorkSans-VariableFont_wght.ttf);
@@ -11,65 +14,38 @@
 }
 
 html {
-    background-color: #2e2e2e;
+    background-color: variables.$backgroundColor;
 }
 
 h1,h2, h3, h4 {
-    color: #ebccc2;
+    color: variables.$accentColorLight;
 }
 
 h2 {
-    font-variation-settings: "wght" 300;
-    letter-spacing: 0.2rem;
-    font-size: 2rem;
+    @include mixins.headlineStyles(300, 0.2rem, 2rem, 0);
 }
 
 h3 {
-    font-variation-settings: "wght" 300;
-    letter-spacing: 0.2rem;
-    font-size: 1.5rem;
-    margin-bottom: 1vh;
+    @include mixins.headlineStyles(300, 0.2rem, 1.5rem, 1vh);
 }
 
 h4 {
-    margin-bottom: 1vh;
-    font-variation-settings: "wght" 300;
-    letter-spacing: 0.2rem;
+    @include mixins.headlineStyles(300, 0.2rem, 1rem, 1vh);
 }
 
 p, a {
-    color: #717171;
+    color: variables.$accentColorDark;
     line-height: 1.5rem;
     margin-bottom: 2vh;
 }
 
 header {
-    margin: 3vh 4vw;
-    display: grid;
-    align-items: center;
-    grid-template-columns: repeat(2, 50%);
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    width: 90vw;
+    @include mixins.grid(repeat(2, 50%), 90vw, 3vh 4vw);
+    @include mixins.position(absolute,0,0,1);
 
 
     nav {
-        text-align: right;
-
-        a {
-            font-size: 0.8rem;
-            text-decoration: none;
-            margin: 0 3vw;
-            color: #867772;
-        }
-
-        a:hover {
-            text-decoration: underline;
-            color: #ebccc2;
-            transition: color 1s ease-in-out;
-        }
+        @include mixins.nav(variables.$accentColorLight, underline);
 
         .socials {
             margin: 0.5vw;
@@ -78,28 +54,12 @@ header {
 }
 
 aside {
-    position: fixed;
-    left: 0;
-    top: 50%;
+    @include mixins.position(fixed,50%,0,2);
     transform: translateY(-50%);
-    z-index: 2;
     background-color: transparent;
 
     nav {
-        text-align: right;
-
-        a {
-            font-size: 0.8rem;
-            color: #ebccc2;
-            text-decoration: none;
-            margin: 0 3vw;
-            color: #867772;
-        }
-
-        a:hover {
-            color: white;
-            transition: color 1s ease-in-out;
-        }
+        @include mixins.nav(white, none);
     }
 
     ul {
@@ -128,8 +88,7 @@ aside {
         div {
             border-left: 1px solid #424242;
             height: 60px;
-            margin-left: 10px;
-            margin-bottom: 5px;
+            margin: 0 0 5px 10px;
         }        
     }
 }

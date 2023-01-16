@@ -1,3 +1,6 @@
+@use "mixins.scss";
+@use "variables.scss";
+
 main {
     display: flex;
     width: 100vw;
@@ -23,7 +26,7 @@ main {
     }
 
     a {
-        background-color: #ebccc2;
+        background-color: variables.$accentColorLight;
         border-radius: 2px;
         font-size: 0.7rem;
         padding: 0.5vh 1.5vw;
@@ -35,16 +38,9 @@ main {
 
 
 li:nth-of-type(5) a:nth-of-type(1) {
-    color: white;
+    @include mixins.floatingNavHighlight;
 }
 
 li:nth-of-type(5)::before {
-    background-image: url('../img/navBig.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: inline-block;
-    width: 20px; 
-    height: 20px;
-    content:"";
-    margin: 0;
+    @include mixins.floatingNavBeforeBig;
 }

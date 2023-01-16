@@ -17,3 +17,57 @@
         }
     }
 }
+
+@mixin headlineStyles($fontWeight, $spacing, $fontSize, $marginBottom) {
+    font-variation-settings: "wght" $fontWeight;
+    letter-spacing: $spacing;
+    font-size: $fontSize;
+    margin-bottom: $marginBottom;
+}
+
+@mixin position($position, $top, $left, $zIndex) {
+    position: $position;
+    top: $top;
+    left: $left;
+    z-index: $zIndex;
+}
+
+@mixin nav($hoverColor, $textDecoration) {
+    text-align: right;
+
+    a {
+        font-size: 0.8rem;
+        text-decoration: none;
+        margin: 0 3vw;
+        color: #867772;
+    }
+
+    a:hover {
+        color: $hoverColor;
+        transition: color 1s ease-in-out;
+        text-decoration: $textDecoration;
+    }  
+}
+
+@mixin grid($columns, $width, $margin) {
+    display: grid;
+    grid-template-columns: $columns;
+    align-items: center;
+    width: $width;
+    margin: $margin;
+}
+
+@mixin floatingNavHighlight {
+        color: white;
+}
+
+@mixin floatingNavBeforeBig {
+        background-image: url('../img/navBig.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        width: 20px; 
+        height: 20px;
+        content:"";
+        margin: 0;
+} 
