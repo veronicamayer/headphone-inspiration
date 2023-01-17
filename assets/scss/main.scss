@@ -88,6 +88,24 @@ aside {
     }
 }
 
+.experiencesAndLoungerMain {
+    display: flex;
+    align-items: center; 
+
+    img {
+        @include mixins.imgProperties(100vh, 55vw, cover);
+    }
+
+    article {
+        margin: 0 5vw;
+
+        h2{
+            margin-bottom: 10vh;
+        }
+    }
+}
+
+
 
 
 

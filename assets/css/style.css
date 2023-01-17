@@ -122,4 +122,20 @@ aside ul div {
   margin: 0 0 5px 10px;
 }
 
+.experiencesAndLoungerMain {
+  display: flex;
+  align-items: center;
+}
+.experiencesAndLoungerMain img {
+  height: 100vh;
+  width: 55vw;
+  object-fit: cover;
+}
+.experiencesAndLoungerMain article {
+  margin: 0 5vw;
+}
+.experiencesAndLoungerMain article h2 {
+  margin-bottom: 10vh;
+}
+
 /*# sourceMappingURL=style.css.map */
