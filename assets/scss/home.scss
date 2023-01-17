@@ -1,11 +1,6 @@
 @use "mixins.scss";
 @use "variables.scss";
 
-@font-face {
-    font-family: Work Sans;
-    src: url(../fonts/WorkSans-VariableFont_wght.ttf);
-}
-
 h1 {
     @include mixins.headlineStyles(300, 0.2rem, 2rem, 0);
     margin: 10vh 0 0 25vw;
@@ -27,10 +22,8 @@ main {
         @include mixins.grid(40% 60%, 65vw, 20vh 0);
 
         img {
-            width: 100%;
-            height: 100%;
+            @include mixins.imgProperties(100%, 100%, cover);
             margin-right: 5vw;
-            grid-column: 1/2;
         }
 
         article {
@@ -45,7 +38,7 @@ main {
 }
 
 li:nth-of-type(1) a:nth-of-type(1) {
-    @include mixins.floatingNavHighlight;
+    color: white;
 }
 
 li:nth-of-type(1)::before {

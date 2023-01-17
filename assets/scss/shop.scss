@@ -6,9 +6,7 @@ main {
     width: 100vw;
 
     img {
-        height: 100vh;
-        width: 55vw;
-        object-fit: cover;
+        @include mixins.imgProperties(100vh, 55vw, cover);
     }
 }
 
@@ -19,9 +17,7 @@ main {
     width: 100%;
 
     img {
-        width: 40vw;
-        object-fit: contain;
-        height: 60vh;
+        @include mixins.imgProperties(60vh, 40vw, contain);
         margin-top: 15vh;
     }
 
@@ -32,13 +28,12 @@ main {
         padding: 0.5vh 1.5vw;
         color: #2e2e2e;
         text-decoration: none;
-
     }
 }
 
 
 li:nth-of-type(5) a:nth-of-type(1) {
-    @include mixins.floatingNavHighlight;
+    color: white;
 }
 
 li:nth-of-type(5)::before {

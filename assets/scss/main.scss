@@ -1,16 +1,11 @@
 @use "mixins.scss";
 @use "variables.scss";
 
-@font-face {
-    font-family: Work Sans;
-    src: url(../fonts/WorkSans-VariableFont_wght.ttf);
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Work Sans;
+    font-family: variables.$fontFamily;
 }
 
 html {

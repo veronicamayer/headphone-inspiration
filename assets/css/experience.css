@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Work Sans;
+  src: url(../fonts/WorkSans-VariableFont_wght.ttf);
+}
 li:nth-of-type(3) a:nth-of-type(1) {
   color: white;
 }

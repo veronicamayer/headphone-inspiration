@@ -1,3 +1,7 @@
+@font-face {
+  font-family: Work Sans;
+  src: url(../fonts/WorkSans-VariableFont_wght.ttf);
+}
 main {
   display: flex;
   width: 100vw;
@@ -15,9 +19,9 @@ main img {
   width: 100%;
 }
 #beoplayH9 img {
+  height: 60vh;
   width: 40vw;
   object-fit: contain;
-  height: 60vh;
   margin-top: 15vh;
 }
 #beoplayH9 a {

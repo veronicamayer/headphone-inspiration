@@ -2,7 +2,7 @@
 @use "variables.scss";
 
 li:nth-of-type(3) a:nth-of-type(1) {
-    @include mixins.floatingNavHighlight;
+    color: white;
 }
 
 li:nth-of-type(3)::before {
